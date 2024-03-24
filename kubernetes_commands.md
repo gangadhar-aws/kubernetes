@@ -48,3 +48,23 @@ kubectl replace -f replica_set.yaml
 ```sh
 kubectl scale --replicas=6 -f replica_set.yaml
 ```
+```sh
+kubectl sclae replicaset myapp_replicaset --replicas=4
+```
+13. Deleting only single pod 
+```sh
+kubectl delete pod myapp_pod_name
+```
+#### Deployments Commands
+14. Create Deployments
+```sh
+kubectl create -f my_deployment_file.yaml
+```
+15. How to see all the deployments
+```sh
+kubectl get deployments
+```
+16. how to see all Details, pods/deployments/replicaset
+```sh
+kubectl get all
+```
