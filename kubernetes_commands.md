@@ -11,3 +11,19 @@ kubectl get pods
 ```sh
 kubectl describe pod pod_name
 ```
+4. Create a new pod with the nginx image.
+```sh
+kubectl run nginx --image=nginx
+```
+5. Delete the pod
+```sh
+kubectl delete pod pod_name
+```
+6. Create a new pod with the name redis and the image redis123
+```sh
+kubectl run redis --image=redis123
+```
+7. how can we edit the image name
+```sh
+kubectl edit pod pod_name
+```
