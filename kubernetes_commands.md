@@ -68,3 +68,43 @@ kubectl get deployments
 ```sh
 kubectl get all
 ```
+### Deployment Rollback Commands
+17. update the deployment instances 
+```sh
+kubectl apply -f deployment_file.yaml
+```
+18. 2nd way using kubectl set image command:     
+```sh
+kubectl set image deployment/myapp_name nginx-container=nginx:1.9.1
+```
+19. How to rollback old version
+```sh
+kubectl rollout undo deployment/myapp_deployment_name
+```
+#### Summarize Commands
+20. Create Deploymnet using file
+```sh
+kubectl create -f deploymnet_file.yaml
+```
+21. Get Deployments 
+```sh
+kubectl get deployments
+```
+22. update Deployments
+```sh
+kubectl apply -f deployment_file.yaml
+```
+```sh
+kubectl set image deploymnet/deployment_name nginx=nginx:1.9.1
+```
+23. status of deployments
+```sh
+kubectl rollout status deployment/deploymnet_app
+```
+```sh
+kubectl rollout history deployment/deploymnet_appname
+```
+24. rollback deployments
+```sh
+kubectl rollout undo deploymnet/deploymnet_appname
+```
