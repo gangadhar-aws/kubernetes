@@ -27,3 +27,24 @@ kubectl run redis --image=redis123
 ```sh
 kubectl edit pod pod_name
 ```
+8. Create a Replica-set command
+```sh
+kubectl create -f my_replicaset.yaml
+```
+9. To see list of replica-set 
+```sh
+kubectl get replicaset
+```
+10. Deleting the replica-set
+```sh
+kubectl delete replicaset rc_name_app
+```
+ -  also deletes all underlying pods
+11. Update/Edit the Yaml file the replica set 
+```sh
+kubectl replace -f replica_set.yaml
+```
+12. Scale the Replicas 
+```sh
+kubectl scale --replicas=6 -f replica_set.yaml
+```
